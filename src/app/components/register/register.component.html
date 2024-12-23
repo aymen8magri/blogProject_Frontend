@@ -1,0 +1,23 @@
+<div class="container mt-4">
+
+
+    <h2 class="text-center"> Create author account </h2>
+
+    <div class="col-6 mx-auto">
+
+
+        <form action="" class="form-group" [formGroup]="registerForm">
+            <input type="text" class="form-control m-1" placeholder="name" formControlName="name">
+            <input type="text" class="form-control m-1" placeholder="lastname" formControlName="lastname">
+            <input type="text" class="form-control m-1" placeholder="email" formControlName="email">
+            <input type="password" class="form-control m-1" placeholder="password" formControlName="password">
+            <input type="file" class="form-control m-1" placeholder="image" (change)="onFileChange($event)">
+            <textarea name="" id="" cols="30" rows="4" placeholder="about" class="form-control m-1" formControlName="about"></textarea>
+
+            <button class="btn btn-dark form-control m-1" (click)="register()">Register</button>
+        </form>
+
+        
+    </div>
+
+</div>
