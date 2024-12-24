@@ -3,11 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { ArticleService } from '../../services/article.service';
 import { Router } from '@angular/router';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+
 
 @Component({
   selector: 'app-create-article',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, AngularEditorModule],
   templateUrl: './create-article.component.html',
   styleUrl: './create-article.component.css'
 })

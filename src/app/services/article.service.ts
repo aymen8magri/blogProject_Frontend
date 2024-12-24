@@ -16,5 +16,17 @@ export class ArticleService {
     return this.http.post(`${this.URL}/ajout`, article);
   }
 
+  getAlArticle() {
+    return this.http.get(`${this.URL}/all`);
+  }
+
+  getArticleByAuthor(id: any) {
+    return this.http.get(`${this.URL}/getByIdAuthor/${id}`);
+  }
+
+  getArticleById(id: any) {
+    return this.http.get(`${this.URL}/getById/${id}`);
+  }
+
   
 }

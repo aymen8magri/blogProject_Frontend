@@ -8,14 +8,15 @@ import { AuthorComponent } from './components/author/author.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { authGardsGuard } from './services/auth-gards.guard';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
 
     {path: 'home', title: 'Home', component: HomeComponent},
     {path: 'about', title: 'About', component: AboutComponent},
-    {path: 'create', title: 'Create', component: CreateArticleComponent},
-    {path: 'article/:id', title: 'Article', component: DetailComponent},
+    {path: 'create', title: 'Create', component: CreateArticleComponent, canActivate: [authGardsGuard]},
+    {path: 'article/:id', title: 'Article', component: DetailComponent, canActivate: [authGardsGuard]},
 
     {path: 'privacy', title: 'Privacy', component: PrivacyComponent},
     {path: 'author/:id', title: 'Author', component: AuthorComponent},
